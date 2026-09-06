@@ -1,0 +1,12 @@
+/* Music player styles */
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #181818;
+  border-top: 1px solid #282828;
+  padding: 1rem;
+}
+
+/* Add player-specific styles here */

@@ -1,0 +1,14 @@
+node_modules/
+.env
+*.db
+*.db-shm
+*.db-wal
+
+uploads/audio/*
+uploads/artwork/*
+
+!uploads/audio/.gitkeep
+!uploads/artwork/.gitkeep
+
+.DS_Store
+Thumbs.db

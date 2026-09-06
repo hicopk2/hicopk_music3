@@ -14,7 +14,7 @@ const db = require("./database");
 const authRoutes = require("./auth");
 const userRoutes = require("./routes/users");
 const trackRoutes = require("./routes/tracks");
-
+app.use("/api/tracks", trackRoutes);
 const app = express();
 
 const PORT = process.env.PORT || 3000;

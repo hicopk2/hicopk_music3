@@ -1,6 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <section class="upload-page">
+
+    <div class="upload-header">
+        <span class="section-label">
+            HICOPK MUSIC
+        </span>
+
+        <h1>Upload your music.</h1>
+
+        <p>
+            Share your sound with the Hicopk Music community.
+        </p>
+    </div>
+
+
+    <div
+        class="upload-dropzone"
+        id="uploadDropzone"
+    >
+
+        <div class="upload-icon">
+            ↑
+        </div>
+
+        <h2>
+            Drop your track here
+        </h2>
+
+        <p>
+            MP3, WAV, FLAC, M4A, OGG or WebM
+        </p>
+
+        <button
+            type="button"
+            class="red-button"
+            id="chooseAudioButton"
+        >
+            Choose audio
+        </button>
+
+        <input
+            type="file"
+            id="audioInput"
+            accept="audio/*"
+            hidden
+        >
+
+    </div>
+
+
+    <div
+        class="upload-selected"
+        id="selectedAudio"
+        hidden
+    >
+
+        <div>
+            <strong id="audioName">
+                Track
+            </strong>
+
+            <span id="audioSize">
+                0 MB
+            </span>
+        </div>
+
+        <button
+            type="button"
+            id="removeAudio"
+        >
+            Remove
+        </button>
+
+    </div>
+
+
+    <div class="upload-form">
+
+        <label>
+            Title
+
+            <input
+                id="trackTitle"
+                type="text"
+                maxlength="150"
+                placeholder="Track title"
+            >
+        </label>
+
+
+        <label>
+            Artist
+
+            <input
+                id="trackArtist"
+                type="text"
+                maxlength="150"
+                placeholder="Artist name"
+            >
+        </label>
+
+
+        <label>
+            Description
+
+            <textarea
+                id="trackDescription"
+                maxlength="5000"
+                placeholder="Tell listeners about this track..."
+            ></textarea>
+        </label>
+
+
+        <label>
+            Genre
+
+            <input
+                id="trackGenre"
+                type="text"
+                maxlength="100"
+                placeholder="Hip-Hop, Rock, Electronic..."
+            >
+        </label>
+
+
+        <label>
+            Tags
+
+            <input
+                id="trackTags"
+                type="text"
+                maxlength="1000"
+                placeholder="summer, chill, new..."
+            >
+        </label>
+
+
+        <label>
+            Album
+
+            <input
+                id="trackAlbum"
+                type="text"
+                maxlength="150"
+                placeholder="Album name"
+            >
+        </label>
+
+
+        <label>
+            Release date
+
+            <input
+                id="trackReleaseDate"
+                type="date"
+            >
+        </label>
+
+
+        <label>
+            Artwork
+
+            <input
+                id="artworkInput"
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+            >
+        </label>
+
+
+        <label>
+            Lyrics
+
+            <textarea
+                id="trackLyrics"
+                maxlength="50000"
+                placeholder="Lyrics..."
+            ></textarea>
+        </label>
+
+
+        <label class="checkbox-row">
+
+            <input
+                id="trackExplicit"
+                type="checkbox"
+            >
+
+            Explicit content
+
+        </label>
+
+
+        <label>
+            Visibility
+
+            <select id="trackVisibility">
+
+                <option value="public">
+                    Public
+                </option>
+
+                <option value="unlisted">
+                    Unlisted
+                </option>
+
+                <option value="private">
+                    Private
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <div class="upload-progress">
+
+            <div
+                class="progress-bar"
+                id="uploadProgressBar"
+            ></div>
+
+        </div>
+
+
+        <div
+            class="upload-progress-text"
+            id="uploadProgressText"
+        >
+            Ready to upload
+        </div>
+
+
+        <button
+            type="button"
+            class="red-button upload-submit"
+            id="uploadTrackButton"
+        >
+            Upload track
+        </button>
+
+    </div>
+
+</section>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hicopk Music - App</title>

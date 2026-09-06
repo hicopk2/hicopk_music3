@@ -1,13 +1,969 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hicopk Music</title>
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hicopk Music</title>
+
+    <meta
+        name="description"
+        content="Hicopk Music — Listen. Create. Share."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
-  <div id="app"></div>
-  <script src="js/app.js"></script>
+
+<!-- =========================================
+     BACKGROUND EFFECTS
+========================================= -->
+
+<div class="background">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="grid"></div>
+</div>
+
+
+<!-- =========================================
+     TOP NAVIGATION
+========================================= -->
+
+<header class="navbar">
+
+    <div class="nav-left">
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+        <a href="#" class="logo">
+            <span class="logo-mark">H</span>
+            <span>HICOPK</span>
+            <small>MUSIC</small>
+        </a>
+
+    </div>
+
+
+    <nav class="desktop-nav">
+
+        <a href="#" class="nav-link active">
+            <span>⌂</span>
+            Home
+        </a>
+
+        <a href="#discover" class="nav-link">
+            <span>◈</span>
+            Discover
+        </a>
+
+        <a href="#search" class="nav-link">
+            <span>⌕</span>
+            Search
+        </a>
+
+        <a href="#library" class="nav-link">
+            <span>♫</span>
+            Library
+        </a>
+
+    </nav>
+
+
+    <div class="nav-right">
+
+        <button class="search-button" id="searchButton">
+            <span>⌕</span>
+            <span class="search-label">Search music...</span>
+            <kbd>⌘ K</kbd>
+        </button>
+
+        <button
+            class="icon-button notification-button"
+            aria-label="Notifications"
+        >
+            ♢
+            <span class="notification-dot"></span>
+        </button>
+
+        <button class="profile-button">
+            <span class="avatar">M</span>
+            <span class="profile-name">Profile</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     MOBILE MENU
+========================================= -->
+
+<div class="mobile-menu-panel" id="mobileMenuPanel">
+
+    <div class="mobile-menu-header">
+        <strong>HICOPK MUSIC</strong>
+
+        <button id="closeMenu">×</button>
+    </div>
+
+    <a href="#" class="mobile-link">⌂ Home</a>
+    <a href="#discover" class="mobile-link">◈ Discover</a>
+    <a href="#search" class="mobile-link">⌕ Search</a>
+    <a href="#library" class="mobile-link">♫ Library</a>
+    <a href="#upload" class="mobile-link">＋ Upload</a>
+
+</div>
+
+
+<!-- =========================================
+     MAIN APPLICATION
+========================================= -->
+
+<main class="main">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                <span class="pulse"></span>
+                YOUR SOUND. YOUR WORLD.
+            </div>
+
+            <h1>
+                Music without
+                <span>limits.</span>
+            </h1>
+
+            <p>
+                Discover new sounds, share your music,
+                and connect with creators around the world.
+                Welcome to Hicopk Music.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-button" id="startListening">
+                    <span>▶</span>
+                    Start Listening
+                </button>
+
+                <button class="secondary-button" id="uploadButton">
+                    <span>＋</span>
+                    Upload Music
+                </button>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>1.2M+</strong>
+                    <span>Tracks</span>
+                </div>
+
+                <div>
+                    <strong>84K+</strong>
+                    <span>Creators</span>
+                </div>
+
+                <div>
+                    <strong>190+</strong>
+                    <span>Countries</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO PLAYER CARD -->
+
+        <div class="hero-art">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="hero-record">
+
+                <div class="record-center">
+                    <span>H</span>
+                </div>
+
+            </div>
+
+            <div class="floating-track">
+
+                <div class="mini-art art-red">
+                    H
+                </div>
+
+                <div class="floating-info">
+
+                    <strong>Midnight Drive</strong>
+                    <span>Hicopk</span>
+
+                </div>
+
+                <button class="floating-play">
+                    ▶
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         QUICK ACTIONS
+    ====================================== -->
+
+    <section class="quick-actions">
+
+        <button class="quick-card">
+
+            <span class="quick-icon">♫</span>
+
+            <div>
+                <strong>Trending</strong>
+                <small>What's hot right now</small>
+            </div>
+
+            <span class="arrow">→</span>
+
+        </button>
+
+
+        <button class="quick-card">
+
+            <span class="quick-icon">✦</span>
+
+            <div>
+                <strong>New Releases</strong>
+                <small>Fresh music every day</small>
+            </div>
+
+            <span class="arrow">→</span>
+
+        </button>
+
+
+        <button class="quick-card">
+
+            <span class="quick-icon">◉</span>
+
+            <div>
+                <strong>Creators</strong>
+                <small>Find your next favorite</small>
+            </div>
+
+            <span class="arrow">→</span>
+
+        </button>
+
+    </section>
+
+
+    <!-- =====================================
+         TRENDING
+    ====================================== -->
+
+    <section class="content-section" id="discover">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-label">LISTEN NOW</span>
+                <h2>Trending tracks</h2>
+            </div>
+
+            <button class="view-all">
+                View all →
+            </button>
+
+        </div>
+
+
+        <div class="track-grid">
+
+
+            <!-- TRACK 1 -->
+
+            <article
+                class="track-card"
+                data-title="Midnight Drive"
+                data-artist="Hicopk"
+            >
+
+                <div class="track-art art-one">
+
+                    <span class="art-letter">M</span>
+
+                    <button class="art-play">
+                        ▶
+                    </button>
+
+                    <span class="explicit">E</span>
+
+                </div>
+
+                <div class="track-info">
+
+                    <div class="track-text">
+
+                        <h3>Midnight Drive</h3>
+                        <p>Hicopk</p>
+
+                    </div>
+
+                    <button class="like-button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="wave-mini">
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+
+                <div class="track-meta">
+                    <span>1.4M plays</span>
+                    <span>4:12</span>
+                </div>
+
+            </article>
+
+
+            <!-- TRACK 2 -->
+
+            <article
+                class="track-card"
+                data-title="Red Lights"
+                data-artist="Nova"
+            >
+
+                <div class="track-art art-two">
+
+                    <span class="art-letter">R</span>
+
+                    <button class="art-play">
+                        ▶
+                    </button>
+
+                </div>
+
+                <div class="track-info">
+
+                    <div class="track-text">
+
+                        <h3>Red Lights</h3>
+                        <p>Nova</p>
+
+                    </div>
+
+                    <button class="like-button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="wave-mini">
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+
+                <div class="track-meta">
+                    <span>982K plays</span>
+                    <span>3:48</span>
+                </div>
+
+            </article>
+
+
+            <!-- TRACK 3 -->
+
+            <article
+                class="track-card"
+                data-title="After Hours"
+                data-artist="Kairo"
+            >
+
+                <div class="track-art art-three">
+
+                    <span class="art-letter">A</span>
+
+                    <button class="art-play">
+                        ▶
+                    </button>
+
+                </div>
+
+                <div class="track-info">
+
+                    <div class="track-text">
+
+                        <h3>After Hours</h3>
+                        <p>Kairo</p>
+
+                    </div>
+
+                    <button class="like-button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="wave-mini">
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+
+                <div class="track-meta">
+                    <span>721K plays</span>
+                    <span>2:59</span>
+                </div>
+
+            </article>
+
+
+            <!-- TRACK 4 -->
+
+            <article
+                class="track-card"
+                data-title="Static Dreams"
+                data-artist="VEX"
+            >
+
+                <div class="track-art art-four">
+
+                    <span class="art-letter">S</span>
+
+                    <button class="art-play">
+                        ▶
+                    </button>
+
+                </div>
+
+                <div class="track-info">
+
+                    <div class="track-text">
+
+                        <h3>Static Dreams</h3>
+                        <p>VEX</p>
+
+                    </div>
+
+                    <button class="like-button">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="wave-mini">
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+
+                <div class="track-meta">
+                    <span>603K plays</span>
+                    <span>3:27</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         NEW RELEASES
+    ====================================== -->
+
+    <section class="content-section">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-label">JUST DROPPED</span>
+                <h2>New releases</h2>
+            </div>
+
+            <button class="view-all">
+                View all →
+            </button>
+
+        </div>
+
+
+        <div class="release-list">
+
+
+            <article class="release-card">
+
+                <div class="release-number">
+                    01
+                </div>
+
+                <div class="release-art art-five">
+                    N
+                </div>
+
+                <div class="release-info">
+                    <h3>Neon Skies</h3>
+                    <p>Juno Vale</p>
+                </div>
+
+                <span class="release-genre">
+                    ELECTRONIC
+                </span>
+
+                <span class="release-time">
+                    3:42
+                </span>
+
+                <button class="release-play">
+                    ▶
+                </button>
+
+            </article>
+
+
+            <article class="release-card">
+
+                <div class="release-number">
+                    02
+                </div>
+
+                <div class="release-art art-six">
+                    O
+                </div>
+
+                <div class="release-info">
+                    <h3>Out Of Time</h3>
+                    <p>Riven</p>
+                </div>
+
+                <span class="release-genre">
+                    HIP-HOP
+                </span>
+
+                <span class="release-time">
+                    2:58
+                </span>
+
+                <button class="release-play">
+                    ▶
+                </button>
+
+            </article>
+
+
+            <article class="release-card">
+
+                <div class="release-number">
+                    03
+                </div>
+
+                <div class="release-art art-seven">
+                    F
+                </div>
+
+                <div class="release-info">
+                    <h3>Falling Forward</h3>
+                    <p>Solace</p>
+                </div>
+
+                <span class="release-genre">
+                    INDIE
+                </span>
+
+                <span class="release-time">
+                    4:06
+                </span>
+
+                <button class="release-play">
+                    ▶
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         ARTISTS
+    ====================================== -->
+
+    <section class="content-section">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-label">DISCOVER</span>
+                <h2>Popular creators</h2>
+            </div>
+
+            <button class="view-all">
+                Explore creators →
+            </button>
+
+        </div>
+
+
+        <div class="artist-grid">
+
+            <article class="artist-card">
+
+                <div class="artist-avatar avatar-one">
+                    H
+                </div>
+
+                <h3>Hicopk</h3>
+                <p>12.8K followers</p>
+
+                <button class="follow-button">
+                    Follow
+                </button>
+
+            </article>
+
+
+            <article class="artist-card">
+
+                <div class="artist-avatar avatar-two">
+                    N
+                </div>
+
+                <h3>Nova</h3>
+                <p>8.4K followers</p>
+
+                <button class="follow-button">
+                    Follow
+                </button>
+
+            </article>
+
+
+            <article class="artist-card">
+
+                <div class="artist-avatar avatar-three">
+                    K
+                </div>
+
+                <h3>Kairo</h3>
+                <p>7.1K followers</p>
+
+                <button class="follow-button">
+                    Follow
+                </button>
+
+            </article>
+
+
+            <article class="artist-card">
+
+                <div class="artist-avatar avatar-four">
+                    V
+                </div>
+
+                <h3>VEX</h3>
+                <p>5.9K followers</p>
+
+                <button class="follow-button">
+                    Follow
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CTA
+    ====================================== -->
+
+    <section class="creator-cta" id="upload">
+
+        <div class="cta-glow"></div>
+
+        <div class="cta-content">
+
+            <span class="section-label">
+                FOR CREATORS
+            </span>
+
+            <h2>
+                Your music deserves
+                <span>to be heard.</span>
+            </h2>
+
+            <p>
+                Upload your tracks, build your audience,
+                and turn your profile into your own musical world.
+            </p>
+
+            <button class="primary-button">
+                ＋ Upload your first track
+            </button>
+
+        </div>
+
+        <div class="cta-wave">
+
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     PERSISTENT MUSIC PLAYER
+========================================= -->
+
+<div class="music-player" id="musicPlayer">
+
+    <div class="player-track">
+
+        <div class="player-art art-one">
+            M
+        </div>
+
+        <div class="player-info">
+
+            <strong id="playerTitle">
+                Midnight Drive
+            </strong>
+
+            <span id="playerArtist">
+                Hicopk
+            </span>
+
+        </div>
+
+        <button class="player-like">
+            ♡
+        </button>
+
+    </div>
+
+
+    <div class="player-center">
+
+        <div class="player-controls">
+
+            <button title="Shuffle">
+                ⤨
+            </button>
+
+            <button title="Previous">
+                |◀
+            </button>
+
+            <button
+                class="main-play"
+                id="mainPlay"
+                title="Play"
+            >
+                ▶
+            </button>
+
+            <button title="Next">
+                ▶|
+            </button>
+
+            <button title="Repeat">
+                ↻
+            </button>
+
+        </div>
+
+
+        <div class="progress-row">
+
+            <span id="currentTime">
+                0:00
+            </span>
+
+            <div
+                class="progress-bar"
+                id="progressBar"
+            >
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+                <div
+                    class="progress-knob"
+                    id="progressKnob"
+                ></div>
+            </div>
+
+            <span id="duration">
+                4:12
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="player-right">
+
+        <button>
+            ♡
+        </button>
+
+        <button>
+            ＋
+        </button>
+
+        <button>
+            ↗
+        </button>
+
+        <div class="volume">
+
+            <span>🔊</span>
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="80"
+                id="volumeSlider"
+            >
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     MOBILE BOTTOM NAV
+========================================= -->
+
+<nav class="mobile-nav">
+
+    <a href="#" class="mobile-nav-item active">
+        <span>⌂</span>
+        Home
+    </a>
+
+    <a href="#discover" class="mobile-nav-item">
+        <span>◈</span>
+        Discover
+    </a>
+
+    <button class="mobile-upload">
+        ＋
+    </button>
+
+    <a href="#library" class="mobile-nav-item">
+        <span>♫</span>
+        Library
+    </a>
+
+    <a href="#" class="mobile-nav-item">
+        <span>◉</span>
+        Profile
+    </a>
+
+</nav>
+
+
+<!-- =========================================
+     SEARCH OVERLAY
+========================================= -->
+
+<div class="search-overlay" id="searchOverlay">
+
+    <div class="search-box">
+
+        <button
+            class="close-search"
+            id="closeSearch"
+        >
+            ×
+        </button>
+
+        <span class="search-big-icon">
+            ⌕
+        </span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search tracks, artists, albums..."
+            autocomplete="off"
+        >
+
+        <div class="search-results" id="searchResults">
+
+            <p>
+                Start typing to search Hicopk Music
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
 </body>
 </html>
